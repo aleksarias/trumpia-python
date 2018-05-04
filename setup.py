@@ -1,10 +1,9 @@
 from distutils.core import setup
-import versioneer
 
 
 setup(name='trumpia',
       packages=['trumpia'],
-      version='0.1.0.dev0',
+      version='0.1.0.dev1',
       description='Python wrapper for Trumpia API',
       license='MIT',
       author='Alex Luis Arias',
