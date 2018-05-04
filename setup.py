@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(name='trumpia',
       packages=['trumpia'],
-      version='0.1.0.dev2',
+      version='0.1.0.dev3',
       description='Python wrapper for Trumpia API',
       long_description=open('README.md').read(),
       long_description_content_type="text/markdown",
