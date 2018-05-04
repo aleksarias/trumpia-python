@@ -1,3 +1,5 @@
+from future.utils import iteritems
+
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3 import Retry
@@ -15,7 +17,7 @@ class TrumpiaListData(object):
         self.display_name = None
         self.frequency = None
         self.list_id = None
-        for key, value in kwargs.iteritems():
+        for key, value in iteritems(kwargs):
             if 'count' in key or 'frequency' in key:
                 setattr(self, key, int(value))
             else:
@@ -27,21 +29,21 @@ class TrumpiaList(object):
     def __init__(self, **kwargs):
         self.list_id = None
         self.list_name = None
-        for key, value in kwargs.iteritems():
+        for key, value in iteritems(kwargs):
             setattr(self, key, value)
 
 
 class TrumpiaAPI(object):
     """
-    Object for interacting with Trumpia's API.
+    Class for interacting with Trumpia's API.
     So far it's mainly for getting data and not mutating and of Trumpia's API objects.
     For more Trumpia API features see: https://trumpia.com/api/docs/rest/overview.php
     """
 
-    def __init__(self, config):
-        self.username = config.get('Trumpia', 'username')
-        self.api_key = config.get('Trumpia', 'api_key')
-        self.content_type = 'application/json'
+    def __init__(self, username, api_key, content_type='application/json'):
+        self.username = username
+        self.api_key = api_key
+        self.content_type = content_type
         self._session = None
 
     @property
@@ -78,7 +80,7 @@ class TrumpiaAPI(object):
             yield TrumpiaList(**trumpia_list)
 
     # def get_list_data(self, trumpia_list: TrumpiaList) -> TrumpiaListData:
-    def get_list_data(self, trumpia_list):
+    def get_list_details(self, trumpia_list):
         """
         Returns the details of a list
 
