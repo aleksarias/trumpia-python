@@ -10,3 +10,5 @@ MANIFEST
 .idea/trumpia-python.iml
 .idea/vcs.xml
 *.pyc
+dist/*
+__pycache__/
