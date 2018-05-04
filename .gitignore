@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/**/workspace.xml
+.idea/**/libraries
+*.egg-info/
+MANIFEST
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/terminal.xml
+.idea/trumpia-python.iml
+.idea/vcs.xml
+*.pyc
