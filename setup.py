@@ -12,7 +12,7 @@ setup(name='trumpia',
       url='http://github.com/aleksarias/trumpia-python',
       keywords=['trumpia', 'api', 'python'],
       classifiers=[
-        'Development Status :: Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
