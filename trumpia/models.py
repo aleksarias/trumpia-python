@@ -68,7 +68,7 @@ class TrumpiaAPI(object):
     # def get_lists(self) -> Iterator[TrumpiaList]:
     def get_lists(self):
         """
-        Returns all the marketing lists in FlexShopper's Trumpia account as a list of TrumpiaList objects
+        Returns all the marketing lists in the account as a list of TrumpiaList objects
 
         :return: Iterator[TrumpiaList]
         """
